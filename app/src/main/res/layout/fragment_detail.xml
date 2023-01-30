@@ -127,62 +127,18 @@
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_time_desciption_movie"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="1dp"
-            app:cardElevation="10dp"
-            app:cardBackgroundColor="@color/blue_light"
-            app:layout_constraintBottom_toTopOf="@+id/cardView5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.455"
-            app:layout_constraintStart_toEndOf="@+id/img_image_description_movie"
-            app:layout_constraintTop_toBottomOf="@+id/cv_gendre_description_movie"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_marginTop="2dp"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:text="@string/runtime"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-
-            <ImageView
-                android:layout_marginTop="7dp"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:padding="20dp"
-                app:srcCompat="@drawable/clock"
-                app:tint="@color/white"
-                android:contentDescription="@string/runtime" />
-
-            <TextView
-                android:id="@+id/tv_text_item2"
-                android:layout_width="match_parent"
-                android:layout_marginTop="60dp"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
             android:id="@+id/cardView5"
             android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_height="0dp"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="1dp"
             app:cardBackgroundColor="@color/blue_light"
             app:cardElevation="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.455"
             app:layout_constraintStart_toEndOf="@+id/img_image_description_movie"
-            app:layout_constraintTop_toBottomOf="@+id/cv_time_desciption_movie">
+            app:layout_constraintTop_toBottomOf="@+id/cv_gendre_description_movie">
 
             <TextView
                 android:layout_width="match_parent"

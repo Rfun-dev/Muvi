@@ -38,7 +38,6 @@ class NowPlayingFragment : Fragment(), MovieAdapter.OnItemClickCallback {
         binding?.rvNowPlaying?.layoutManager = layoutManager
         val itemDecoration = DividerItemDecoration(requireActivity(), layoutManager.orientation)
         binding?.rvNowPlaying?.addItemDecoration(itemDecoration)
-
         findNowPlaying()
     }
 

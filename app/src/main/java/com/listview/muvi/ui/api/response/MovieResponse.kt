@@ -23,8 +23,6 @@ data class Movie(
     @SerializedName("vote_average")
     var rating: Float,
 
-    var runtime: Int,
-
     @SerializedName("release_date")
     var release: String?
 ) : Parcelable

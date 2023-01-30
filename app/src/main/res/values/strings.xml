@@ -9,7 +9,6 @@
     <string name="sinopsis">Sinopsis</string>
     <string name="movie_detail">Movie Detail</string>
     <string name="release_date">Release Date</string>
-    <string name="runtime">Runtime</string>
     <string name="rating">Rating</string>
     <string name="time">%1$d h %2$d m</string>
 </resources>

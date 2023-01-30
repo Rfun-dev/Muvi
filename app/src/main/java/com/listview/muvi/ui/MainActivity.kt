@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         getBinding = ActivityMainBinding.inflate(layoutInflater)
-        supportActionBar?.hide()
         setContentView(binding?.root)
         val navView = binding?.navView
         val navController = findNavController(R.id.nav_host_fragment)
@@ -27,5 +26,6 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController,appBarConfiguration)
         navView?.setupWithNavController(navController)
+        supportActionBar?.hide()
     }
 }

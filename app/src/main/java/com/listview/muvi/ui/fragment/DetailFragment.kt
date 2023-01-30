@@ -37,9 +37,6 @@ class DetailFragment : Fragment() {
         binding?.imgImageDescriptionMovie?.load(mDetailMovie?.image)
         binding?.tvTextItem1?.text = mDetailMovie?.release
         val rating = mDetailMovie?.rating?.div(2).toString()
-        val hours = mDetailMovie?.runtime?.div(60)
-        val minutes = mDetailMovie?.runtime?.rem(60)
-        binding?.tvTextItem2?.text = resources.getString(R.string.time, hours, minutes)
         binding?.tvTextItem3?.text = rating
         binding?.btnBackDescipritonMovie?.setOnClickListener {
             parentFragmentManager.popBackStack()
