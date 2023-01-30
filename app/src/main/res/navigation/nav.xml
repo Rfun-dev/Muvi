@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/navigation_now_playing">
+
+    <fragment
+        android:id="@+id/navigation_now_playing"
+        android:name="com.listview.muvi.ui.fragment.NowPlayingFragment"
+        android:label="Now Playing"
+        tools:layout="@layout/fragment_now_playing" >
+        <action
+            android:id="@+id/action_navigation_now_playing_to_detailFragment22"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_popular"
+        android:name="com.listview.muvi.ui.fragment.PopulerFragment"
+        android:label="Populer"
+        tools:layout="@layout/fragment_populer" >
+        <action
+            android:id="@+id/action_navigation_popular_to_detailFragment22"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_top_rated"
+        android:name="com.listview.muvi.ui.fragment.TopratedFragment"
+        android:label="Top Rated"
+        tools:layout="@layout/fragment_toprated" >
+        <action
+            android:id="@+id/action_navigation_top_rated_to_detailFragment22"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_up_coming"
+        android:name="com.listview.muvi.ui.fragment.UpcomingFragment"
+        android:label="Up Coming"
+        tools:layout="@layout/fragment_upcoming" >
+        <action
+            android:id="@+id/action_navigation_up_coming_to_detailFragment2"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment2"
+        android:name="com.listview.muvi.ui.fragment.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="movie"
+            app:argType="com.listview.muvi.ui.api.response.Movie" />
+    </fragment>
+</navigation>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Muvi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="up_coming">Up Coming</string>
+    <string name="sinopsis">Sinopsis</string>
+    <string name="movie_detail">Movie Detail</string>
+    <string name="release_date">Release Date</string>
+    <string name="runtime">Runtime</string>
+    <string name="rating">Rating</string>
+    <string name="time">%1$d h %2$d m</string>
+</resources>

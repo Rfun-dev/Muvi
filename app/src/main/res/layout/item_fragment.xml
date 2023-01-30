@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/img_image_item_film"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_radius"
+        android:backgroundTint="@color/blue_drak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_item_film"
+        android:layout_width="250dp"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/img_image_item_film"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rbRatingItemFilm"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/img_image_item_film"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_item_film" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
