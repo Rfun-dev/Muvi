@@ -10,12 +10,21 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.listview.muvi.databinding.ItemFragmentBinding
 import com.listview.muvi.ui.api.response.Movie
+import com.listview.muvi.ui.helper.Diffutil
 import com.listview.muvi.ui.helper.Helper.load
 
-class MovieAdapter(var listMovie : List<Movie>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
-    private lateinit var binding : ItemFragmentBinding
+class MovieAdapter: RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
     private var onItemClickCallback : OnItemClickCallback? = null
-    class ViewHolder(itemView: ItemFragmentBinding) : RecyclerView.ViewHolder(itemView.root)
+    private val listMovie = ArrayList<Movie>()
+    fun setListNotes(listMovie: List<Movie>) {
+        val diffCallback = Diffutil(this.listMovie, listMovie)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
+        this.listMovie.clear()
+        this.listMovie.addAll(listMovie)
+        diffResult.dispatchUpdatesTo(this)
+    }
+    private lateinit var binding : ItemFragmentBinding
+    inner class ViewHolder(itemView: ItemFragmentBinding) : RecyclerView.ViewHolder(itemView.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = ItemFragmentBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -46,5 +55,7 @@ class MovieAdapter(var listMovie : List<Movie>) : RecyclerView.Adapter<MovieAdap
 
     override fun getItemCount(): Int = listMovie.size
 
+    override fun getItemViewType(position: Int): Int = position
 
+    override fun getItemId(position: Int): Long = position.toLong()
 }

@@ -68,9 +68,9 @@ class UpcomingFragment : Fragment(), MovieAdapter.OnItemClickCallback {
 
 
     private fun setMovie(results: List<Movie>) {
-        val adapter = MovieAdapter(results)
+        val adapter = MovieAdapter()
+        adapter.setListNotes(results)
         adapter.setOnItemClickCallback(this)
-        adapter.notifyDataSetChanged()
         binding?.rvNowUpcoming?.adapter = adapter
     }
 
